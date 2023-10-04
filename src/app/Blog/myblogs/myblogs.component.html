@@ -1,0 +1,32 @@
+<header class="app-header">
+  <nav>
+  <h1>Pages of Wisdom: Sharing Stories, Sparking Conversations</h1>
+  <p>These are all your personal blogs . Feel free to edit , read or delete them.</p>
+  <div class="nav-links">
+    <div class="nav-links-inside">
+    <li><a routerLink="/showblogs" class="new-blog-button" ><mat-icon>reply</mat-icon>Back to all blogs</a></li>
+    <li><a routerLink="/addblogs" class="new-blog-button" style="margin-left: 2px;"><mat-icon>queue</mat-icon>Add new blog</a></li>
+    </div>
+  </div>
+  <div class="user-info">
+    <mat-icon>person</mat-icon> <p >{{username}} </p>
+  </div>
+</nav>
+</header>
+<div class="card-container">
+<div class="card" *ngFor="let i of blogArray">
+  <div class="card-header">
+  {{i.title}}
+    <div class="card-icons">
+    <mat-icon class="card-icon-edit" routerLink="/editblog"  [routerLink]="'/editblog/' + i.blogId" >edit</mat-icon>
+    <mat-icon class="card-icon-delete" (click)= "deleteBlog(i.blogId)">delete</mat-icon>
+    </div>
+  </div>
+  <div class="card-body">
+    <p>{{i.content}}</p>
+  </div>
+  <div class="card-footer">
+    <p class="author">UserAuthor:{{i.userAuthor}} </p>
+    <p class="date">DateOf: {{i.dateOf}}</p>
+  </div>
+</div>

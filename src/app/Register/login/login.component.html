@@ -1,5 +1,12 @@
 <form (ngSubmit)="submitLoginForm()">
   <input type="text" [(ngModel)]="UserName" name="UserName" placeholder="Username">
   <input type="password" [(ngModel)]="Password" name="Password" placeholder="Password">
-  <button type="submit">Login</button>
+  <button type="submit"  >Login</button>
+  <span style="color: red; font-size: x-small;">{{loginSuccFail }}</span>
 </form>
+<div class="already-registered">
+  <p>Have not registered yet?</p>
+  <button routerLink="/" class="redirect-button">Register</button>
+</div>
+
+

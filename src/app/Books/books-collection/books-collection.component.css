@@ -1,0 +1,290 @@
+/* .app-header {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+.app-header p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  color: #ff9800;
+  font-size: 12px;
+  font-weight:lighter;
+  border-radius: 5px;
+
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.user-info-a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.user-info-a mat-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+
+.user-info-b {
+  display: flex;
+  align-items: center;
+}
+
+.user-info-b .btn {
+  background-color:#333333 ;
+  color: rgb(174, 119, 17);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.user-info-b .btn mat-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+
+.user-info-b .btn:hover {
+  background-color: #443939;
+}
+
+
+.user-info p {
+  margin: 0;
+}
+
+.container {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: fit-content;
+  min-width: 400px;
+  display: flex;
+  background-color: #f0ebeb;
+  margin-left: .2cm;
+
+}
+.card-contents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px ;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-author {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+  background-color: #3f3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 120px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+
+}
+
+.btn-primary:hover {
+  background-color: rgb(25, 30, 36);
+} */
+/* Header Styles */
+.app-header {
+  background-color: #ca7b21;
+  color: white;
+  padding: 10px;
+}
+
+.app-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info-a {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.user-info-a mat-icon {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.user-info-b button {
+  background-color: #ca7b21;
+  color: rgb(19, 18, 18);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.user-info-b button :hover{
+  transform: translateX(-5px);
+}
+
+/* Book Card Styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  min-width: 7cm;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-contents {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.card-author {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.card-price {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.btn-primary {
+  background-color: rgb(241, 93, 13);
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: rgba(241, 93, 13, 0.142);
+  color: rgb(241, 93, 13);
+}
+/* Book Card Styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.card img {
+  max-width: 100%;
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the entire container */
+}

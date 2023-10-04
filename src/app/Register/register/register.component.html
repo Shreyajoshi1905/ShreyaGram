@@ -1,5 +1,20 @@
-<form (ngSubmit)="submitRegisterForm()">
-  <input type="text" [(ngModel)]="UserName" name="UserName" placeholder="Username">
-  <input type="password" [(ngModel)]="Password" name="Password" placeholder="Password">
-  <button type="submit">Register</button>
+<header class="header">
+  <div class="logo">
+    <div class="register-logo">
+    <mat-icon>edit document</mat-icon>
+    <h1>Your Blog</h1>
+    </div>
+    <p>A Place to Share Ideas and Stories</p>
+  </div>
+</header>
+
+<form (ngSubmit)="submitRegisterForm()" #registerForm="ngForm">
+  <input type="text" [(ngModel)]="UserName" name="UserName" placeholder="Username" >
+  <input type="password" [(ngModel)]="Password"  name="Password" placeholder="Password" minlength="8" maxlength="32" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^*]).{8,32}$" >
+  <button type="submit" >Register</button>
 </form>
+
+<div class="already-registered">
+  <p>Already registered?</p>
+  <button routerLink="/login" class="redirect-button">Login</button>
+</div>

@@ -1,0 +1,34 @@
+<header class="app-header">
+  <nav>
+  <h1>"Your Reading Journey Begins Here."</h1>
+  <div class="user-info">
+    <div class="user-info-a">
+    <mat-icon>person</mat-icon> <p >{{loggedInUserName}}</p>
+    </div>
+    <div class="user-info-b">
+    <button routerLink="/bookscart" class="btn btn-primary"><mat-icon>shopping_cart</mat-icon></button>
+    </div>
+  </div>
+
+</nav>
+
+</header>
+<div class="container" >
+  <div class="row" *ngFor="let i of allbooks">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src = {{i.imageUrl}} alt="title">
+        <div class="card-body">
+          <div class= "card-contents">
+          <h3 class="card-title">{{i.title}}</h3>
+          <p class="card-author">Author: {{i.author}}</p>
+          <p class="card-price">INR {{i.amount}}</p>
+          <a (click)="addToCart()" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

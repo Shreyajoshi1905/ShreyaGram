@@ -1,0 +1,18 @@
+<form (ngSubmit)="saveNewBook()" #bookForm="ngForm">
+  <div class="form-container">
+    <label for="author">Author</label>
+    <input  name = "author" [(ngModel)]="book.author" id="author" type="text">
+
+    <label for="title">Title</label>
+    <input  name = "title" [(ngModel)]="book.title" id="title"  type="text">
+
+    <label for="amount">Amount</label>
+    <input  name = "amount" [(ngModel)]="book.amount" id="amount"  type="text">
+
+    <label for="image">Image</label>
+    <input [(ngModel)] = "book.imageUrl" type="file" id="image" name="image" class="image-input" (change)="onImageSelect($event)">
+    <img [src]="imageUrl" alt="Selected Image" class="image-preview" width="100">
+
+    <button type="submit" [disabled]="bookForm.invalid" class="submit-button">Add new book</button>
+  </div>
+</form>

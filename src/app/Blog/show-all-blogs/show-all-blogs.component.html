@@ -1,0 +1,28 @@
+<header class="app-header">
+  <nav>
+  <h1>Pages of Wisdom: Sharing Stories, Sparking Conversations</h1>
+  <p>Feel free to read and you can create your own blog and publish it.</p>
+  <div class="nav-links">
+    <li><a routerLink="/addblogs" class="new-blog-button">Add my own Blog</a></li>
+  </div>
+  <div class="user-info">
+    <mat-icon>person</mat-icon> <p >{{loggedInUserName}}</p>
+  </div>
+</nav>
+</header>
+<div class="card-container">
+<div class="card" *ngFor="let i of allblogs">
+  <div class="card-header">
+    {{i.title}}
+  </div>
+  <div class="card-body">
+    <p>{{i.content}}</p>
+  </div>
+  <div class="card-footer">
+    <p class="author">UserAuthor:{{i.userAuthor}} </p>
+    <p class="date">DateOf: {{i.dateOf}}</p>
+  </div>
+</div>
+
+</div>
+

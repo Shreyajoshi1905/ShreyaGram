@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SignupModel } from 'src/app/Models/SignupModel';
+import { Router } from '@angular/router';
+import { ApiResponse } from 'src/app/Models/ApiResponseModel';
 import { userLoginService } from 'src/app/Services/UserLoginServices';
 
 @Component({
@@ -8,16 +9,23 @@ import { userLoginService } from 'src/app/Services/UserLoginServices';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  constructor(private userloginService: userLoginService) { }
   UserName!: string;
   Password!: string;
+  RegisterSuccFail!: string;
+  registermessage!: ApiResponse;
 
+  constructor(private userloginService: userLoginService , private router: Router) {
+  }
   submitRegisterForm(){
     this.userloginService.register({UserName: this.UserName , Password: this.Password})
-  }
+    .subscribe(res => {
+      console.log("registration successful");
+      this.router.navigate(['/login'])
+    }
+    );
+    console.log(this.RegisterSuccFail)
 
-
-  ngOnInit(): void {
   }
+  ngOnInit(): void {}
 
 }

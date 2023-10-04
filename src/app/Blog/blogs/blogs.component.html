@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="logo">
+    <div class="register-logo">
+      <mat-icon>edit document</mat-icon>
+      <h1>Your Blog</h1>
+      </div>
+      <p>A place for creatives to share their work. This is made just for people like you who are curious and creative. Let the world know your thoughts.</p>
+
+</div>
+  <button class="btn btn-secondary" routerLink="/myblogs" >My Blogs</button>
+  <div class="logout-button">
+
+    <button class="btn btn-secondary" (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
+  </div>
+</header>
+<div class="container">
+  <h1>Create a New Blog</h1>
+  <form (ngSubmit)="createBlog()">
+    <label for = "Title">Title</label>
+    <input [(ngModel)]="blog.title" name="Title" class="form-control" required>
+
+    <label for = "Content">Content</label>
+    <textarea [(ngModel)]="blog.content" name="content" class="form-control" required></textarea>
+
+    <label for = "UserAuthor">Author</label>
+    <input [(ngModel)]="blog.userAuthor" name="UserAuthor" class="form-control" required>
+    <div class="date">
+    <label>published on: </label>
+    <input  [(ngModel)]="blog.dateOf" name = "DateOf" class = "form-control" >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Blog</button>
+  </form>
+</div>
